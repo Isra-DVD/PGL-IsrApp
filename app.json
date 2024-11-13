@@ -2,6 +2,7 @@
   "expo": {
     "name": "pgl-israpp-final",
     "slug": "pgl-israpp-final",
+    "scheme": "pgl-israpp-final",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -23,6 +24,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": ["expo-router"]
   }
 }
