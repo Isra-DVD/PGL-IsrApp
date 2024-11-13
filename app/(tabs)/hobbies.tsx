@@ -1,10 +1,10 @@
 import React from "react";
-import { Text } from "react-native";
+import { ProfileDescription } from "../../components/ProfileDescription";
 
 const hobbies = () => {
   return (
     <>
-      <Text>Pagina QR</Text>
+      <ProfileDescription />
     </>
   );
 };

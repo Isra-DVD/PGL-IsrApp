@@ -38,6 +38,34 @@ export const stylesLight = StyleSheet.create({
     padding: 10,
     backgroundColor: lightTheme.accent,
   },
+  profileContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginVertical: 50,
+  },
+  avatar: {
+    width: 90,
+    height: 90,
+    borderRadius: 45,
+    marginLeft: 7,
+  },
+  descriptionContainer: {
+    backgroundColor: lightTheme.accent,
+    padding: 10,
+    borderRadius: 10,
+    marginLeft: 10,
+    width: "70%",
+  },
+  descriptionTitle: {
+    textAlign: "center",
+    fontWeight: "700",
+    fontSize: 20,
+    color: lightTheme.textPrimary,
+  },
+  descriptionText: {
+    textAlign: "center",
+    color: lightTheme.textPrimary,
+  },
 });
 
 export const stylesDark = StyleSheet.create({
@@ -63,5 +91,32 @@ export const stylesDark = StyleSheet.create({
   homeLink: {
     padding: 10,
     backgroundColor: darkTheme.accent,
+  },
+  profileContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginVertical: 20,
+  },
+  avatar: {
+    width: 90,
+    height: 90,
+    borderRadius: 45,
+  },
+  descriptionContainer: {
+    backgroundColor: darkTheme.accent,
+    padding: 10,
+    borderRadius: 10,
+    marginLeft: 10,
+    width: "70%",
+  },
+  descriptionTitle: {
+    textAlign: "center",
+    fontWeight: "700",
+    fontSize: 20,
+    color: darkTheme.textPrimary,
+  },
+  descriptionText: {
+    textAlign: "center",
+    color: darkTheme.textPrimary,
   },
 });
