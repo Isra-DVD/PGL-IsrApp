@@ -84,6 +84,11 @@ export const stylesLight = StyleSheet.create({
     fontSize: 16,
     backgroundColor: lightTheme.accentSoft,
   },
+  qrContainer: {
+    flex: 1,
+    alignItems: "center",
+    marginTop: 75,
+  },
 });
 
 export const stylesDark = StyleSheet.create({
@@ -154,5 +159,10 @@ export const stylesDark = StyleSheet.create({
     fontStyle: "italic",
     fontSize: 16,
     backgroundColor: darkTheme.accentSoft,
+  },
+  qrContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
