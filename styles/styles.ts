@@ -66,6 +66,24 @@ export const stylesLight = StyleSheet.create({
     textAlign: "center",
     color: lightTheme.textPrimary,
   },
+  scrollContainer: {
+    paddingHorizontal: 10,
+    marginVertical: 10,
+    width: "100%",
+  },
+  favoritesItem: {
+    borderColor: lightTheme.textPrimary,
+    borderWidth: 1,
+    borderStyle: "dashed",
+    padding: 10,
+    marginVertical: 5,
+    color: lightTheme.textPrimary,
+    textAlign: "center",
+    fontWeight: "bold",
+    fontStyle: "italic",
+    fontSize: 16,
+    backgroundColor: lightTheme.accentSoft,
+  },
 });
 
 export const stylesDark = StyleSheet.create({
@@ -118,5 +136,23 @@ export const stylesDark = StyleSheet.create({
   descriptionText: {
     textAlign: "center",
     color: darkTheme.textPrimary,
+  },
+  scrollContainer: {
+    paddingHorizontal: 10,
+    marginVertical: 10,
+    width: "100%",
+  },
+  favoritesItem: {
+    borderColor: darkTheme.textPrimary,
+    borderWidth: 1,
+    borderStyle: "dashed",
+    padding: 10,
+    marginVertical: 5,
+    color: darkTheme.textPrimary,
+    textAlign: "center",
+    fontWeight: "bold",
+    fontStyle: "italic",
+    fontSize: 16,
+    backgroundColor: darkTheme.accentSoft,
   },
 });
