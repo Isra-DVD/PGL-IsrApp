@@ -5,7 +5,6 @@ import { QrCode } from "../../components/QrCode";
 const qr = () => {
   return (
     <>
-      <ProfileDescription />
       <QrCode />
     </>
   );
