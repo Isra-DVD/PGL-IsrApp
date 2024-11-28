@@ -24,6 +24,7 @@ interface Product {
 const shopping = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [modalVisible, setModalVisible] = useState(false);
+  const [editProduct, setEditProduct] = useState<Product | null>(null);
 
   const renderProduct = ({ item }) => {
     const getImageCategory = (category: string) => {
@@ -63,13 +64,20 @@ const shopping = () => {
           <TouchableOpacity
             onPress={() => isBought(item.id)}
             style={[
-              stylesLight.botonCart,
-              item.enCarrito ? stylesLight.inCart : {},
+              stylesLight.butonCart,
+              item.bought ? stylesLight.inCart : {},
             ]}
           >
             <Text style={stylesLight.textButtonCart}>
-              {item.enCarrito ? "Eliminar del carrito" : "Añadir al carrito"}
+              {item.bought ? "Eliminar del carrito" : "Añadir al carrito"}
             </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => handleEditProduct(item)}
+            style={stylesLight.butonEdit}
+          >
+            <Text style={stylesLight.textButtonCart}>Editar</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
@@ -84,7 +92,17 @@ const shopping = () => {
   };
 
   const AddProduct = (product: Product) => {
-    setProducts([...products, { id: uuidv4(), ...product, bought: false }]);
+    if (editProduct) {
+      setProducts((products) =>
+        products.map((prod) =>
+          prod.id === editProduct.id ? { ...prod, ...product } : prod
+        )
+      );
+    } else {
+      setProducts([...products, { id: uuidv4(), ...product, bought: false }]);
+    }
+    setModalVisible(false);
+    setEditProduct(null);
   };
 
   const calculateTotalPrice = () => {
@@ -105,6 +123,15 @@ const shopping = () => {
     setProducts((products) => products.filter((product) => product.id !== id));
   };
 
+  const handleEditProduct = (product: Product) => {
+    setEditProduct(product);
+    setModalVisible(true);
+  };
+
+  const deleteAllProducts = () => {
+    setProducts([]);
+  };
+
   return (
     <View style={stylesLight.shoppingContainer}>
       <Text style={stylesLight.total}>Lista de la compra</Text>
@@ -113,6 +140,7 @@ const shopping = () => {
         visible={modalVisible}
         onClose={() => setModalVisible(false)}
         onAddProduct={AddProduct}
+        product={editProduct}
       />
       <FlatList
         data={products}
@@ -125,6 +153,12 @@ const shopping = () => {
       <Text style={stylesLight.total}>
         Precio Total: ${calculateTotalPrice().toFixed(2)}
       </Text>
+      <Button
+        title="Borrar todos los productos"
+        color="red"
+        onPress={deleteAllProducts}
+        disabled={products.length === 0}
+      />
     </View>
   );
 };

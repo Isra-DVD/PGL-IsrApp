@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Modal, View, Text, TextInput, Button, Alert } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { stylesLight } from "../styles/styles";
@@ -6,35 +6,52 @@ import { stylesLight } from "../styles/styles";
 interface ModalAddProductProps {
   visible: boolean;
   onClose: () => void;
-  onAddProduct: (Product: {
-    name: string;
-    category: string;
-    amount: number;
-    price: number;
-  }) => void;
+  onAddProduct: (product: Product) => void;
+  product: Product | null;
+}
+
+interface Product {
+  id: string;
+  name: string;
+  category: string;
+  amount: number;
+  price: number;
+  bought: boolean;
 }
 
 const ModalAddProduct = ({
   visible,
   onClose,
   onAddProduct,
+  product,
 }: ModalAddProductProps) => {
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [amount, setAmount] = useState("");
   const [price, setPrice] = useState("");
 
-  const handleAdd = () => {
+  useEffect(() => {
+    if (product) {
+      setName(product.name);
+      setCategory(product.category);
+      setAmount(String(product.amount));
+      setPrice(String(product.price));
+    }
+  }, [product]);
+
+  const handleAddOrEdit = () => {
     if (!name || !amount || !price) {
       Alert.alert("Debes rellenar todos los campos");
       return;
     }
 
     onAddProduct({
+      id: product ? product.id : "",
       name,
       category,
       amount: parseInt(amount, 10),
       price: parseFloat(price),
+      bought: product ? product.bought : false,
     });
 
     setName("");
@@ -91,7 +108,10 @@ const ModalAddProduct = ({
 
           <View style={stylesLight.buttonRow}>
             <Button title="Cancelar" color="red" onPress={onClose} />
-            <Button title="Agregar" onPress={handleAdd} />
+            <Button
+              title={product ? "Editar Producto" : "Añadir Producto"}
+              onPress={handleAddOrEdit}
+            />
           </View>
         </View>
       </View>

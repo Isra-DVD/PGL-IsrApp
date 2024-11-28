@@ -171,8 +171,14 @@ export const stylesLight = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
-  botonCart: {
+  butonCart: {
     backgroundColor: lightTheme.accentSoft,
+    padding: 5,
+    borderRadius: 5,
+    marginTop: 10,
+  },
+  butonEdit: {
+    backgroundColor: lightTheme.textPrimary,
     padding: 5,
     borderRadius: 5,
     marginTop: 10,
