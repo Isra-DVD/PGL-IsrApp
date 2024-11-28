@@ -107,7 +107,7 @@ export const stylesLight = StyleSheet.create({
     alignItems: "center",
     padding: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#ccc",
+    borderBottomColor: lightTheme.textPrimary,
   },
   productInfo: {
     flex: 1,
@@ -150,7 +150,7 @@ export const stylesLight = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: lightTheme.accent,
+    borderColor: lightTheme.accentSoft,
     borderRadius: 5,
     padding: 10,
     marginBottom: 15,
@@ -158,6 +158,47 @@ export const stylesLight = StyleSheet.create({
   buttonRow: {
     flexDirection: "row",
     justifyContent: "space-between",
+  },
+  image: {
+    width: 50,
+    height: 50,
+    marginRight: 10,
+  },
+  details: {
+    flex: 1,
+  },
+  name: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  botonCart: {
+    backgroundColor: lightTheme.accentSoft,
+    padding: 5,
+    borderRadius: 5,
+    marginTop: 10,
+  },
+  inCart: {
+    backgroundColor: "black",
+  },
+  textButtonCart: {
+    color: lightTheme.background,
+    fontWeight: "bold",
+  },
+  deleteButton: {
+    backgroundColor: "red",
+    padding: 5,
+    borderRadius: 5,
+    marginTop: 10,
+  },
+  textButtonDelete: {
+    color: lightTheme.background,
+    fontWeight: "bold",
+  },
+  emptyText: {
+    textAlign: "center",
+    marginTop: 20,
+    fontSize: 16,
+    color: lightTheme.textPrimary,
   },
 });
 

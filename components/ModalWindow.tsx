@@ -6,7 +6,7 @@ import { stylesLight } from "../styles/styles";
 interface ModalAddProductProps {
   visible: boolean;
   onClose: () => void;
-  onAddProduct: (product: {
+  onAddProduct: (Product: {
     name: string;
     category: string;
     amount: number;
