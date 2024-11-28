@@ -34,9 +34,10 @@ export const stylesLight = StyleSheet.create({
     height: 250,
     marginBottom: 50,
   },
-  homeLink: {
+  Link: {
     padding: 10,
     backgroundColor: lightTheme.accent,
+    marginTop: 20,
   },
   profileContainer: {
     flexDirection: "row",
