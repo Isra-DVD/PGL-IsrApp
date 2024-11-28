@@ -14,7 +14,7 @@ interface ModalAddProductProps {
   }) => void;
 }
 
-const ModalAgregarProducto = ({
+const ModalAddProduct = ({
   visible,
   onClose,
   onAddProduct,
@@ -99,4 +99,4 @@ const ModalAgregarProducto = ({
   );
 };
 
-export default ModalAgregarProducto;
+export default ModalAddProduct;
