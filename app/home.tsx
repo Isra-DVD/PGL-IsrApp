@@ -8,8 +8,11 @@ const home = () => {
   return (
     <View style={stylesLight.homeContainer}>
       <Home />
-      <Link style={stylesLight.homeLink} href={"/hobbies"}>
+      <Link style={stylesLight.Link} href={"/hobbies"}>
         <Text>REPOSITORIO</Text>
+      </Link>
+      <Link style={stylesLight.Link} href={"./shopping"}>
+        <Text>LISTA DE LA COMPRA</Text>
       </Link>
     </View>
   );
