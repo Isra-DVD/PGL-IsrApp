@@ -90,6 +90,75 @@ export const stylesLight = StyleSheet.create({
     alignItems: "center",
     marginTop: 75,
   },
+  shoppingContainer: {
+    flex: 1,
+    padding: 10,
+    backgroundColor: lightTheme.background,
+  },
+  total: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginBottom: 20,
+    textAlign: "center",
+  },
+  product: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: "#ccc",
+  },
+  productInfo: {
+    flex: 1,
+    marginLeft: 10,
+  },
+  productName: {
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  productImage: {
+    width: 50,
+    height: 50,
+    borderRadius: 5,
+  },
+  buttons: {
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  button: {
+    marginVertical: 5,
+  },
+  modalOverlay: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+  },
+  modalContent: {
+    width: "90%",
+    padding: 20,
+    backgroundColor: lightTheme.background,
+    borderRadius: 10,
+    elevation: 5,
+  },
+  label: {
+    fontSize: 16,
+    fontWeight: "bold",
+    marginBottom: 5,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: lightTheme.accent,
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 15,
+  },
+  buttonRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
 });
 
 export const stylesDark = StyleSheet.create({
