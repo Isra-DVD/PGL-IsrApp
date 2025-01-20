@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Modal, View, Text, TextInput, Button, Alert } from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import { stylesLight } from "../styles/styles";
+import { v4 as uuidv4 } from "uuid";
 
 interface ModalAddProductProps {
   visible: boolean;
@@ -46,12 +47,12 @@ const ModalAddProduct = ({
     }
 
     onAddProduct({
-      id: product ? product.id : "",
+      id: product?.id || uuidv4(),
       name,
       category,
       amount: parseInt(amount, 10),
       price: parseFloat(price),
-      bought: product ? product.bought : false,
+      bought: product?.bought || false,
     });
 
     setName("");
