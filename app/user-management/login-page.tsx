@@ -37,7 +37,7 @@ const RegisterScreen = () => {
                 setEmail("");
                 setPassword("");
                 if (result !== "Pasaron cosas") {
-                  router.navigate("/home"); // A login
+                  router.navigate("/home");
                 }
               },
             },

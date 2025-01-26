@@ -233,6 +233,7 @@ export const stylesLight = StyleSheet.create({
     backgroundColor: lightTheme.accentSoft,
     borderRadius: 8,
     alignItems: "center",
+    marginBottom: 15,
   },
   buttonText: {
     color: "#fff",
