@@ -28,13 +28,6 @@ export default () => {
             title: "Tiendita",
           }}
         />
-        <Drawer.Screen
-          name="user-management/register-page"
-          options={{
-            drawerLabel: "Registro",
-            title: "Registro",
-          }}
-        />
       </Drawer>
     </GestureHandlerRootView>
   );
