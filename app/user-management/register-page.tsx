@@ -59,7 +59,7 @@ const RegisterScreen = () => {
                 setEmail("");
                 setPassword("");
                 if (result !== "Pasaron cosas") {
-                  router.navigate("/home");
+                  router.navigate("/home"); // A login
                 }
               },
             },

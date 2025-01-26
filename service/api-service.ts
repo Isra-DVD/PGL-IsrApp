@@ -1,5 +1,4 @@
 import axios from "axios";
-import { Alert } from "react-native";
 
 const register = async (fullname: string, email: string, pswd: string) => {
   try {
