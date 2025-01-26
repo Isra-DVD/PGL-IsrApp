@@ -206,6 +206,39 @@ export const stylesLight = StyleSheet.create({
     fontSize: 16,
     color: lightTheme.textPrimary,
   },
+  registerContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f5f5f5",
+    padding: 20,
+  },
+  registerTitle: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 20,
+  },
+  registerInput: {
+    width: "100%",
+    padding: 15,
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 8,
+    marginBottom: 15,
+    backgroundColor: "#fff",
+  },
+  registerButton: {
+    width: "100%",
+    padding: 15,
+    backgroundColor: lightTheme.accentSoft,
+    borderRadius: 8,
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
 });
 
 export const stylesDark = StyleSheet.create({

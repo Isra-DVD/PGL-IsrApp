@@ -9,8 +9,8 @@ import {
 } from "react-native";
 import { v4 as uuidv4 } from "uuid";
 import "react-native-get-random-values";
-import { stylesLight } from "../../styles/styles";
-import ModalAddProduct from "../../components/ModalWindow";
+import { stylesLight } from "../../../styles/styles";
+import ModalAddProduct from "../../../components/ModalWindow";
 
 interface Product {
   id: string;
@@ -30,21 +30,21 @@ const shopping = () => {
     const getImageCategory = (category: string) => {
       switch (category) {
         case "Panaderia":
-          return require("../../assets/panaderia.png");
+          return require("../../../assets/panaderia.png");
         case "Bebidas":
-          return require("../../assets/bebidas.png");
+          return require("../../../assets/bebidas.png");
         case "Enlatados":
-          return require("../../assets/enlatados.png");
+          return require("../../../assets/enlatados.png");
         case "Carnes":
-          return require("../../assets/carnes.png");
+          return require("../../../assets/carnes.png");
         case "Pescados":
-          return require("../../assets/pescados.png");
+          return require("../../../assets/pescados.png");
         case "Frutas":
-          return require("../../assets/frutas.png");
+          return require("../../../assets/frutas.png");
         case "Otros":
-          return require("../../assets/otros.png");
+          return require("../../../assets/otros.png");
         default:
-          return require("../../assets/default.png");
+          return require("../../../assets/default.png");
       }
     };
 

@@ -1,14 +1,14 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { Link } from "expo-router";
-import { stylesLight } from "../styles/styles";
-import Home from "../components/Home";
+import { stylesLight } from "../../styles/styles";
+import Home from "../../components/Home";
 
 const home = () => {
   return (
     <View style={stylesLight.homeContainer}>
       <Home />
-      <Link style={stylesLight.Link} href={"/hobbies"}>
+      <Link style={stylesLight.Link} href={"./profile/qr"}>
         <Text>REPOSITORIO</Text>
       </Link>
       <Link style={stylesLight.Link} href={"./shopping"}>
