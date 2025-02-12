@@ -1,6 +1,6 @@
 import { router } from "expo-router";
 import { useEffect } from "react";
-import asyncStorageService from "../service/async-storage";
+import asyncStorageService from "../services/async-storage";
 
 const StartPage = () => {
   useEffect(() => {

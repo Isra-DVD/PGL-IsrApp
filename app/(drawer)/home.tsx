@@ -3,7 +3,7 @@ import React from "react";
 import { Link, router } from "expo-router";
 import { stylesLight } from "../../styles/styles";
 import Home from "../../components/Home";
-import asyncStorageService from "../../service/async-storage";
+import asyncStorageService from "../../services/async-storage";
 
 const home = () => {
   return (

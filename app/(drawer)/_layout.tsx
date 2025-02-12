@@ -20,12 +20,18 @@ export default () => {
             title: "Mis hobbies",
           }}
         />
-
         <Drawer.Screen
           name="shopping/index"
           options={{
             drawerLabel: "Tienda",
             title: "Tiendita",
+          }}
+        />
+        <Drawer.Screen
+          name="camera-page"
+          options={{
+            drawerLabel: "Galería",
+            title: "Galería de fotos",
           }}
         />
       </Drawer>
